@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>RegistrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="bg">
+  <div class="titulo">
+    <h3>Registro</h3>
+  </div>
+  <img class="img" src="assets/icon/logo.png">
+  <div class="Contenido">
+    <form>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" name="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+      </ion-item>
+      <div class="botones">
+        <ion-button (click)="onSubmitLogin()" expand="block" color="success" type="submit">Registrarse</ion-button>
+        <ion-button expand="block" color="warning" routerLink="/ingreso">Ya tengo una Cuenta</ion-button>
+      </div> 
+    </form>
+  </div>
+
+</ion-content>

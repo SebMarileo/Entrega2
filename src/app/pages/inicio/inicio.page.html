@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>RegistrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <div class="bienvenido">
+    <h1>Bienvenido</h1>
+    <ion-card *ngIf="qrData">
+      <ngx-qrcode [elementType]='elementType' [value]="qrData"></ngx-qrcode>
+      <!--<ion-input type="text" placeholder="ingrese direccion" [(ngModel)]="qrData"></ion-input>-->
+    </ion-card>
+  </div>
+
+  <div class="volver">
+    <ion-button expand="block" color="success" routerLink="/ramosprofe">Asignaturas</ion-button>
+  </div>
+</ion-content>
